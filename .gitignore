@@ -1,0 +1,7 @@
+env
+venv
+.idea
+*.pyc
+db.json
+secrets.py
+readme.md

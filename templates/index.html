@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if user and user.secret_number %}
+    <form method="post" action="/result">
+        <input type="text" name="guess" placeholder="Įveskite savo spėjimą">
+        <br>
+
+        <button type="submit">Patvirtinti</button>
+    </form>
+{% else %}
+    <form method="post" action="/login">
+<!--        <input type="text" name="user-name" placeholder="Jūsų vardas"><br>-->
+<!--        <input type="email" name="user-email" placeholder="Jūsų el.pašto adresas"><br>-->
+<!--        <input type="password" name="user-password" placeholder="Slaptažodis"><br>-->
+        <p>Šis WEB yra viešai prieinamas. Prašome prisijungti, kad būtumėte apsaugotas <a href="/profile">profile page</a></p>
+
+        <a href="/github/login">Patvirtinti prisijungimą per GitHub</a>
+<!--        <button>Patvirtinti</button>-->
+    </form>
+{% endif %}
+{% endblock content %}

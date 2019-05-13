@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Guess the secret number{% endblock title %}</title>
+
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+
+    <body>
+        <h1>Žaidimas "Atspėkite skaičių"</h1>
+        <h2>          nuo 1 iki 30</h2>
+        <p>Norėdami baigti, įveskite "c"</p>
+
+        <p>
+            <a href="/">Atgal</a> |
+            <a href="/profile">Mano profilis</a> |
+            <a href="/github/login">Login</a> |
+            <a href="/github/logout">Logout</a>
+        </p>
+
+        {% block content %}
+        {% endblock content %}
+    </body>
+</html>
